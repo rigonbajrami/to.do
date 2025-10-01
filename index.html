@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Todo List App</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+</head>
+<body>
+    <div class="todo-container">
+        <div class="todo-header">
+            <h1>📝 My Todo List</h1>
+            <div class="todo-input-container">
+                <input type="text" id="todoInput" placeholder="What needs to be done?" maxlength="100">
+                <button id="addTodoBtn">Add</button>
+            </div>
+        </div>
+        
+        <div class="todo-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <div class="todo-stats">
+            <span id="todoCount">0 items left</span>
+            <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+        </div>
+        
+        <ul id="todoList" class="todo-list"></ul>
+        
+        <div class="todo-empty" id="emptyState">
+            <p>🎉 No todos yet! Add one above to get started.</p>
+        </div>
+    </div>
+    
+    <script src="todo.js"></script>
+</body>
+</html>
